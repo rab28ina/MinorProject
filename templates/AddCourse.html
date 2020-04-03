@@ -1,0 +1,285 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Time Table Generator</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'styles/AddCourse.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap.css' %}">
+  <script type="text/javascript">
+    function changeFunc() {
+      var selectBox = document.getElementById("selectBox");
+      var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+      if (selectedValue === "5") {
+        div5.style.display = "block";
+      } else {
+        div5.style.display = "none";
+      }
+      if (selectedValue === "6") {
+        div5.style.display = "block";
+        div6.style.display = "block";
+      } else {
+        div6.style.display = "none";
+      }
+      if (selectedValue === "7") {
+        div5.style.display = "block";
+        div6.style.display = "block";
+        div7.style.display = "block";
+      } else {
+        div7.style.display = "none";
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron upper">
+      <!--<nav class="navbar navbar-inverse">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>s
+            <a href="#" class="navbar-brand">Add courses</a></div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active lol"><a href="#">Add Teachers</a></li>
+              <li><a href="#" class="lol left">AddClass Room</a></li>
+              <li><a href="#" class="lol left">Create Time Table</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#" class="lol left ">Logout</a></li>
+            </ul>
+          </div>
+      </nav>
+      <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    -->
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="addcourse">Add Course</a>
+        <a href="Teachers">Add Teacher</a>
+        <a href="classroom">Add Classroom</a>
+        <a href="createtimetable">Create Time Table</a>
+        <a href="/">Logout</a>
+      </div>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+      </script>
+      <div class="container mark">
+        <form class="form-horizontal">
+          <div class="myDiv">
+            <div class="form-group">
+              <label class="control-label col-sm-3 " for="AddCourse">Add Course:</label>
+              <div class="col-sm-5">
+                <input type="text" class="form-control " id="addCourse" placeholder="Enter Course">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-3" for="subjectno">No of subjects:-</label>
+              <select class="subjectno" id="selectBox" onchange="changeFunc();">
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+              </select>
+            </div>
+          </div>
+
+
+
+          <div class="form-group">
+            <label class="control-label col-sm-3" for="subject1">Subject 1 Name:-</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="subject1" placeholder="Enter Subject 1">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-3" for="subject1">Subject 1 Teacher:-</label>
+            <select class="subject1Teachers">
+              <option value="1">Ram kumar</option>
+              <option value="2">Ajay Anand</option>
+              <option value="3">Abhishek Ray</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="subject1Priority">Priority:-</label>
+            <select class="subject1Priority">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-3" for="subject2">Subject 2 Name:-</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="subject2" placeholder="Enter Subject 2">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-3" for="subject2">Subject 2 Teacher:-</label>
+            <select class="subject2Teachers">
+              <option value="1">Ram kumar</option>
+              <option value="2">Ajay Anand</option>
+              <option value="3">Abhishek Ray</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="subject2Priority">Priority:-</label>
+            <select class="subject2Priority">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-3" for="subject3">Subject 3 Name:-</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="subject3" placeholder="Enter Subject 3">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-3" for="subject3">Subject 3 Teacher:-</label>
+            <select class="subject3Teachers">
+              <option value="1">Ram kumar</option>
+              <option value="2">Ajay Anand</option>
+              <option value="3">Abhishek Ray</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="subject3Priority">Priority:-</label>
+            <select class="subject3Priority">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-3" for="subject4">Subject 4 Name:-</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="subject4" placeholder="Enter Subject 4">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-3" for="subject4">Subject 4 Teacher:-</label>
+            <select class="subject4Teachers">
+              <option value="1">Ram kumar</option>
+              <option value="2">Ajay Anand</option>
+              <option value="3">Abhishek Ray</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="subject4Priority">Priority:-</label>
+            <select class="subject4Priority">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+
+          <div id="div5">
+            <div class="form-group">
+              <label class="control-label col-sm-3" for="subject5">Subject 5 Name:-</label>
+              <div class="col-sm-5">
+                <input type="text" class="form-control" id="subject5" placeholder="Enter Subject 5">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-3" for="subject5">Subject 5 Teacher:-</label>
+              <select class="subject5Teachers">
+                <option value="1">Ram kumar</option>
+                <option value="2">Ajay Anand</option>
+                <option value="3">Abhishek Ray</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="subject5Priority">Priority:-</label>
+              <select class="subject5Priority">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="div6">
+            <div class="form-group">
+              <label class="control-label col-sm-3" for="subject6">Subject 6 Name:-</label>
+              <div class="col-sm-5">
+                <input type="text" class="form-control" id="subject6" placeholder="Enter Subject 6">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-3" for="subject6">Subject 6 Teacher:-</label>
+              <select class="subject6Teachers">
+                <option value="1">Ram kumar</option>
+                <option value="2">Ajay Anand</option>
+                <option value="3">Abhishek Ray</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="subject6Priority">Priority:-</label>
+              <select class="subject6Priority">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="div7">
+            <div class="form-group">
+              <label class="control-label col-sm-3" for="subject7">Subject 7 Name:-</label>
+              <div class="col-sm-5">
+                <input type="text" class="form-control" id="subject7" placeholder="Enter Subject 7">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-3" for="subject7">Subject 7 Teacher:-</label>
+              <select class="subject7Teachers">
+                <option value="1">Ram kumar</option>
+                <option value="2">Ajay Anand</option>
+                <option value="3">Abhishek Ray</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="subject7Priority">Priority:-</label>
+              <select class="subject7Priority">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-success active bt" onclick="myfunction()">Submit</button>
+            </div>
+          </div>
+
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

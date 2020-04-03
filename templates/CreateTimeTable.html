@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Time Table Generator</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'styles/CreateTimeTable.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'styles/Bootstrap.css' %}">
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron upper">
+    <!--  <nav class="navbar navbar-inverse">
+        <div class="container">
+          <div class="navbar-header">
+            <a href="active #" class="navbar-brand">Add courses</a></div>
+          <ul class="nav navbar-nav">
+            <li class="lol"><a href="#">Add Teachers</a></li>
+            <li><a href="#" class="lol left">AddClass Room</a></li>
+            <li><a href="#" class="lol left">Create Time Table</a></li>
+            <li><a href="#" class="lol left">Logout</a></li>
+          </ul>
+        </div>
+      </nav>-->
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="addcourse">Add Course</a>
+        <a href="Teachers">Add Teacher</a>
+        <a href="classroom">Add Classroom</a>
+        <a href="createtimetable">Create Time Table</a>
+        <a href="/">Logout</a>
+      </div>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+      </script>
+      <div class="container mark">
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label class="control-label col-sm-3 " for="course1">Room No For Course 1:-</label>
+
+            <select id="subject1">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-3" for="course2">Room No For Course 2:-</label>
+            <br>
+            <select id="subject2">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-3" for="course3">Room No For Course 3:-</label>
+            <br>
+            <select id="subjects" class="drop">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-3" for="course4">Room No For Course 4:-</label>
+            <br>
+            <select id="subjects" class="drop">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-3" for="course4">No Of Lecture:-</label>
+            <br>
+            <select id="subjects" class="drop">
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-success active bt">Create</button>
+            </div>
+          </div>
+
+
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

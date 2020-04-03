@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Time Table Generator</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/login.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap.css' %}">
+</head>
+
+<body>
+
+	<div id="upper">
+	</div>
+
+
+<nav class="navbar navbar-inverse">
+	<div class="container">
+		<div class="navbar-header" >
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        	<span class="sr-only">Toggle navigation</span>
+        	<span class="icon-bar"></span>
+        	<span class="icon-bar"></span>
+        	<span class="icon-bar"></span>
+        </button>
+	<a href="{% static '#' %}" class="navbar-brand" >Time Table Generator</a></div>
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	<ul class="nav navbar-nav navbar-right">
+		<li class="active"><a href="about">About</a></li>
+		<li><a href="accounts/login">Login</a></li>
+		<li><a href="accounts/signup">SignUp</a></li>
+	</ul>
+	</div>
+    </div>
+	</nav>	
+
+	<script src="{% static 'js/jquery-3.4.1.js' %}" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="crossorigin="anonymous"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>	
+<div class="last" >
+<div class="post" >
+        <h2> About </h2>   
+     
+        <p class="about">Marilyn Monroe (born Norma Jeane Mortenson; June 1, 1926 – August 4, 1962[1]) was an American actress, model, and singer. Famous for playing comedic "blonde bombshell" characters, she became one of the most popular sex symbols of the 1950s and early 1960s and was emblematic of the era's changing attitudes towards sexuality. Although she was a top-billed actress for only a decade, her films grossed $200 million (equivalent to $2 billion in 2019) by the time of her unexpected death in 1962.[2] More than half a century later, she continues to be a major popular culture icon.[3]  </p>
+
+        <p>Born and raised in Los Angeles, Monroe spent most of her childhood in foster homes and an orphanage and married at the age of 16. While working in a factory as part of the war effort during World War II, she met a photographer from the First Motion Picture Unit and began a successful pin-up modeling career. The work led to short-lived film contracts with Twentieth Century-Fox and Columbia Pictures. After a series of minor film roles, she signed a new contract with Fox in late 1950. Over the next two years, she became a popular actress with roles in several comedies, including As Young as You Feel and Monkey Business, and in the dramas Clash by Night and Don't Bother to Knock. Monroe faced a scandal when it was revealed that she had posed for nude photos before she became a star, but the story did not damage her career and instead resulted in increased interest in her films.</p>
+
+        <hr class="style1">
+        <br>
+    </div>
+</div>
+
+
+
+</body>
+</html>
