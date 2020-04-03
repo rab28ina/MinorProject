@@ -1,0 +1,84 @@
+/*	height: 300px;
+	background: url(http://i.pinimg.com/474x/4f/05/2a/4f052ab52a219b97cfa77d70d42934fc.jpg);
+    background-repeat: no-repeat;
+   object-fit: cover;
+   width:;
+    float: top;
+    margin-top: 0px;
+}*/
+body{
+	height: 300px;
+	background: url(https://media.istockphoto.com/videos/white-clocks-flying-black-background-loopable-video-id159125058?s=640x640);
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: top;
+    margin-top: 0px;
+}
+.upper{
+	height: 500px;
+	margin-top: 50px;
+	margin-right: 100px;
+	margin-left: 170px;
+}
+.lol{
+	padding-left:50px;
+	padding-right: 50px;
+}
+.left{
+	padding-left:50px;
+}
+#teacherEmailId{
+	width:50%;
+}
+
+
+#pwd{
+	width:50%;
+}
+.mark{
+	padding-left:  100px;
+	margin-left:200px; 
+	margin-top: 30px;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
