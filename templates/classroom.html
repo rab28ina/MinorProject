@@ -1,15 +1,15 @@
-{% load static %}
 <!DOCTYPE html>
 <html>
 
 <head>
   <title>Time Table Generator</title>
-  <link rel="stylesheet" type="text/css" href="{% static 'styles/AddCourse.css' %}">
-  <link rel="stylesheet" type="text/css" href="{% static 'styles/Bootstrap.css' %}">
+  <link rel="stylesheet" type="text/css" href="classroom.css">
+  <link rel="stylesheet" type="text/css" href="Bootstrap.css">
   <script type="text/javascript">
     function changeFunc() {
       var selectBox = document.getElementById("selectBox");
       var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+       
       if (selectedValue === "2") {
         div6.style.display = "block";
       } else {
@@ -69,11 +69,11 @@
     -->
       <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="addcourse">Add Course</a>
-        <a href="Teachers">Add Teacher</a>
-        <a href="classroom">Add Classroom</a>
-        <a href="createtimetable">Create Time Table</a>
-        <a href="/">Logout</a>
+        <a href="#">Add Course</a>
+        <a href="#">Add Teacher</a>
+        <a href="#">Add Classroom</a>
+        <a href="#">Create Time Table</a>
+        <a href="#">Logout</a>
       </div>
       <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
 
@@ -91,7 +91,7 @@
           <div class="myDiv">
             <div class="form-group">
               <label class="control-label col-sm-3 " for="AddCourse">Add Classrooms:</label>
-              
+             
             </div>
             <div class="form-group">
               <label class="control-label col-sm-3" for="subjectno">No of classrooms:-</label>
@@ -127,7 +127,7 @@
             </select>
           </div>
           <!--</div>-->
-          <div id="div6">
+          <div id="div6" >
           <div class="form-group">
             <label class="control-label col-sm-3" for="subject2">Room no 2:-</label>
             <select class="subject2Teachers">
@@ -145,7 +145,7 @@
             </select>
           </div>
           </div>
-          <div id="div7">
+          <div id="div7" >
           <div class="form-group">
             <label class="control-label col-sm-3" for="subject3">Room no 3:-</label>
             <select class="subject3Teachers">
@@ -163,7 +163,7 @@
             </select>
           </div>
           </div>
-          <div id="div8">
+          <div id="div8" >
           <div class="form-group">
             <label class="control-label col-sm-3" for="subject4">Room no 4:-</label>
             <select class="subject4Teachers">
@@ -181,7 +181,7 @@
             </select>
           </div>
           </div>
-          
+         
 
           <!--<div id="div5">
             <div class="form-group">
@@ -207,7 +207,6 @@
               </select>
             </div>
           </div>
-
           <div id="div6">
             <div class="form-group">
               <label class="control-label col-sm-3" for="subject6">Subject 6 Name:-</label>
@@ -232,7 +231,6 @@
               </select>
             </div>
           </div>
-
           <div id="div7">
             <div class="form-group">
               <label class="control-label col-sm-3" for="subject7">Subject 7 Name:-</label>
